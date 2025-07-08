@@ -16,7 +16,7 @@
     .hero-section {
       position: relative;
       height: 100vh;
-      background-image: url('./imgs/beautiful-view-tranquil-desert-clear-sky-captured-morocco.jpg');
+      background-image: url('./imgs/background.jpeg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -824,4 +824,247 @@
   opacity: 1 !important;
    visibility: visible !important;
   
+}
+/* owl */
+.destination-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.destination-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.destination-card:hover .destination-overlay {
+  opacity: 1;
+}
+
+.destination-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.destination-card:hover img {
+  transform: scale(1.1);
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  color: #ffd700;
+  margin-bottom: 1rem;
+}
+
+.section-title p {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+.destination-card:hover .destination-overlay {
+  background: rgba(255, 215, 0, 0.6); /* Gold overlay on hover */
+}
+
+.destination-card:hover h5 {
+  color: #ffd700; /* Gold text color on hover */
+}
+/* Owl Carousel Specific Styling */
+.owl-carousel .owl-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.mkdf-tdm-item-holder {
+  position: relative;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  background-color: #fff;
+}
+
+.mkdf-tdm-item-holder:hover {
+  transform: scale(1.05);
+}
+
+.mkdf-tours-destination-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.mkdf-tours-destination-item-image {
+  width: 100%;
+  height: 250px; /* Adjust height as needed */
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.mkdf-tours-destination-item-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.mkdf-tours-destination-item-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.mkdf-tours-destination-desc {
+  font-size: 14px;
+}
+
+/* Custom Navigation Buttons */
+.owl-prev, .owl-next {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.owl-prev {
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.owl-next {
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.owl-prev:hover, .owl-next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .mkdf-tdm-item-holder {
+      margin: 5px;
+  }
+
+  .mkdf-tours-destination-item-title {
+      font-size: 16px;
+  }
+
+  .mkdf-tours-destination-desc {
+      font-size: 12px;
+  }
+}
+
+.hero-bg {
+  transition: background-image 1s ease-in-out;
+}
+
+.owl-carousel img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+  .contact-btn {
+    position: relative;
+    padding: 8px 20px;
+    color: #fff !important;
+    
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    overflow: hidden;
+  }
+
+  .contact-btn::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: rgba(255,255,255,0.15);
+    transform: skewX(-20deg);
+    transition: left 0.5s;
+  }
+
+  .contact-btn:hover::before {
+    left: 200%;
+  }
+
+  .contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  }
+
+/* top btn */
+#toufek-back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  text-decoration: none;
+  font-family: 'Cinzel Decorative', serif;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none; /* prevent interaction when hidden */
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#toufek-back-to-top.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+
+.toufek-btt-wrapper {
+  background-color: #fff;
+  border: 2px solid #ffa500;
+  border-radius: 12px;
+  padding: 10px 16px;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+#toufek-back-to-top:hover .toufek-btt-wrapper {
+  background-color: #ffa500;
+  color: white;
+  box-shadow: 0 0 20px #ffa500;
+}
+
+.toufek-btt-text {
+  text-align: center;
+  color: #ffa500;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+#toufek-back-to-top:hover .toufek-btt-text {
+  color: #fff;
+}
+
+.toufek-icon-stack {
+  margin-top: 6px;
+  color: #ffa500;
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+}
+
+#toufek-back-to-top:hover .toufek-icon-stack {
+  color: #fff;
 }

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sinai — A Journey Through Time</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: #fdfaf4;
+      color: #2e2e2e;
+      overflow-x: hidden;
+    }
+
+    header {
+      height: 80vh;
+      background-image: url('./imgs/360_F_234151308_MrCpLBWLqd0BRcwL9cThJQlYvGtrkMDx.jpg');
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      color: white;
+    }
+
+    header h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 3.5rem;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      z-index: 1;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 1000px;
+      margin: 4rem auto;
+      padding: 2rem;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background: #c8b187;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+    }
+
+    .container {
+      padding: 1.5rem 2rem;
+      position: relative;
+      width: 50%;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.7s ease-out;
+    }
+
+    .container.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .container.left {
+      left: 0;
+    }
+
+    .container.right {
+      left: 50%;
+    }
+
+    .container::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: -10px;
+      background-color: #e5b123;
+      border: 4px solid #134274;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .container.right::after {
+      left: -10px;
+    }
+
+    .content {
+      padding: 1rem 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .container.left .content {
+      margin-right: auto;
+    }
+
+    .container.right .content {
+      margin-left: auto;
+    }
+
+    .content h2 {
+      font-family: 'Cinzel', serif;
+      color: #53442f;
+    }
+
+    .content img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 1rem;
+      clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+    }
+
+    .content ul {
+      margin: 1rem 0 0 1rem;
+    }
+
+    footer {
+      background: #d8cbb3;
+      text-align: center;
+      padding: 2rem;
+      font-family: 'Cinzel', serif;
+    }
+
+    @media screen and (max-width: 768px) {
+      .timeline::after {
+        left: 31px;
+      }
+
+      .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+
+      .container.right {
+        left: 0%;
+      }
+
+      .container::after {
+        left: 15px;
+      }
+
+      .content img {
+        clip-path: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Sinai — A Journey Through Time</h1>
+  </header>
+
+  <div class="timeline">
+
+    <div class="container left">
+      <div class="content">
+        <h2>🏺 Sinai… Prehistoric Heritage</h2>
+        <p>Deep within its mountains and valleys, amidst silent sands and stone plateaus, Sinai hides stories that stretch back thousands of years before the birth of Christ. This land was not merely a passage — it was home to early communities, a source of precious minerals, and the cradle of some of humanity’s earliest written expressions.</p>
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <h2>⛏️ Wadi Maghara – The Copper Legacy</h2>
+        <p>In the rugged southwest of Sinai, the Pharaohs carved their legacy into the rock.</p>
+        <p>At Wadi Maghara, kings of Egypt’s 4th Dynasty — such as Sneferu and Khufu — left inscriptions dating back to around 2600 BCE, depicting their control over copper mining.</p>
+        <img src="./imgs/magharah.jpeg" alt="Wadi Maghara Inscriptions"/>
+      </div>
+    </div>
+
+    <div class="container left">
+      <div class="content">
+        <h2>⛩️ Serabit el-Khadim – Temple of Turquoise</h2>
+        <p>At Serabit el-Khadim, they built a temple for the goddess Hathor, Lady of Turquoise, and left behind majestic hieroglyphs — as well as the earliest known alphabetic script: the Proto-Sinaitic inscriptions, ancestors of our modern writing.</p>
+        <img src="./imgs/srabit.jpeg" alt="Serabit el-Khadim Temple"/>
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <h2>📜 The Nawamis – Mysterious Prehistoric Tombs</h2>
+        <p>Scattered atop remote hills, the Nawamis are circular stone structures built without mortar. Believed to date back to the third millennium BCE. Most likely used as tombs or ritual sites. Their silence and symmetry make them feel like timeless guardians watching over the desert sky.</p>
+        <img src="./imgs/nowamis.jpeg" alt="Nawamis Structures"/>
+      </div>
+    </div>
+
+    <div class="container left">
+      <div class="content">
+        <h2>🏛️ The Nabataean Village – Life on the Edge of the Desert</h2>
+        <p>Nestled in Wadi Ghurba, the remains of an ancient Nabataean village still stand — a reminder of a thriving civilization from the 1st century BCE. The Nabataeans, skilled traders, built stone homes and water cisterns. They used Sinai as part of their trade route linking Petra to Egypt. Today, palm trees still grow near the site, whispering tales of peace and survival in the wilderness.</p>
+        <img src="./imgs/nebtia.jpeg" alt="Nabataean Village"/>
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <h2>🛠️ Neolithic Tools and Stone Circles – The First Settlements</h2>
+        <p>Across northern and central Sinai, archaeologists have found stone tools, arrowheads, and primitive stone circles dating back to 5000–6000 BCE. These discoveries reveal that early humans hunted, herded, and built shelters here. Sinai was not just a crossroads — it was a place of beginnings.</p>
+      </div>
+    </div>
+
+    <div class="container left">
+      <div class="content">
+        <h2>🌍 Why Is Sinai a Unique Prehistoric Treasure?</h2>
+        <ul>
+          <li>It holds the <strong>oldest known alphabetic script</strong>.</li>
+          <li>It was a meeting point for <strong>Pharaohs, Nabataeans, and Semitic tribes</strong>.</li>
+          <li>It preserves a rare <strong>human and geological record</strong> of life’s earliest expressions in the desert.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>“Walk softly in Sinai… the ground beneath your feet is older than kings.”</p>
+  </footer>
+
+  <script>
+    const containers = document.querySelectorAll('.container');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    containers.forEach(container => {
+      observer.observe(container);
+    });
+  </script>
+
+</body>
+</html>
+
+

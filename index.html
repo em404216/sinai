@@ -23,7 +23,10 @@
     />
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-
+ <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Great+Vibes&display=swap"
       rel="stylesheet"
@@ -50,32 +53,33 @@
         </button>
         <div class="collapse navbar-collapse" id="mainNav">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="#about">About Sinai</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#mountains">Mountains</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="./monastic.html">Monastic Settlements in Sinai</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#valleys">Valleys</a>
+              <a class="nav-link" href="./heritage.html">Heritage Sites</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#heritage">Heritage Sites</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#monastery"
-                >St. Catherine's Monastery</a
+              <a class="nav-link" href="./history.html"
+                >The Bedouin Culture</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#daytrips">Day Trips</a>
+              <a class="nav-link" href="./trecks.html">About Trips</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#longtrips">Long Trips</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
+            
+           <li class="nav-item">
+  <a class="nav-link contact-btn" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">
+    Contact
+  </a>
+</li>
+
           </ul>
         </div>
       </div>
@@ -86,7 +90,8 @@
       <div class="hero-content animate__animated animate__fadeInDown">
         <h1 class="display-4 fw-bold">Sinaifootprint</h1>
         <p class="lead">Bedouin Tales & Trails</p>
-        <a href="#about" class="btn btn-warning mt-3">Explore Sinai</a>
+        <p class="lead">"Step into the Trails of Sinai — Where Nature Thrives, History Lives, and the Bedouin Guide"</p>
+        <!-- <a href="#about" class="btn btn-warning mt-3">Explore Sinai</a> -->
       </div>
       <div class="ripped-img">
         <img
@@ -697,7 +702,7 @@
 
     <!--  -->
 
-    <!--  -->
+    <!-- vallys  -->
     <div class="container py-5">
       <h2
         class="text-center text-gradient display-5 fw-bold mb-3 animate__animated animate__fadeInDown"
@@ -1294,27 +1299,238 @@
       </div>
     </div>
 
-    <!-- 
-  <section id="daytrips" class="text-center">
-    <div class="container">
-      <h2 class="section-title">Day Trips</h2>
-      <p>Explore beautiful locations in a single-day adventure with Bedouin guides.</p>
-    </div>
-  </section>
 
-  <section id="longtrips" class="bg-light text-dark text-center">
-    <div class="container">
-      <h2 class="section-title">Long Trips</h2>
-      <p>Multi-day journeys with camping, hiking, and traditional Bedouin meals.</p>
-    </div>
-  </section>
 
-  <section id="contact" class="text-center">
-    <div class="container">
-      <h2 class="section-title">Contact Us</h2>
-      <p class="mb-0">📞 +20 100 914 1766 | 📧 sinaifootprint@gmail.com</p>
+<!-- footprint -->
+<section class="py-5" id="Destinations" style="background-color: #f7f7f7">
+  <div class="container">
+    <div class="text-center mb-4" data-aos="fade-up" data-aos-duration="1000">
+      <h2 class="gold-text highlight" >Sinai’s Natural Footprint</h2>
+      <p class="about-description text-center text-muted">
+        Discover breathtaking destinations across South Sinai
+      </p>
+      <div class="gold-underline"></div>
     </div>
-  </section> -->
+
+    <!-- Owl Carousel -->
+    <div class="owl-carousel owl-theme mt-4" data-aos="fade-up">
+      
+      <!-- Kharzet El-Shaq -->
+      <div class="mkdf-tdm-item-holder">
+        <div class="mkdf-tours-destination-item-holder" data-bs-toggle="modal" data-bs-target="#modalKharzet">
+          <div class="mkdf-tours-destination-item-image">
+            <img src="./imgs/Kharzet Del shaq.jpeg" alt="Kharzet El-Shaq" />
+          </div>
+          <div class="mkdf-tours-destination-item-content">
+            <div class="mkdf-tours-destination-item-content-table-cell">
+              <h4 class="mkdf-tours-destination-item-title">Kharzet El-Shaq</h4>
+              <h5 class="mkdf-tours-destination-desc">Hidden Valley Gem</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- El Galt Al Azraq -->
+      <div class="mkdf-tdm-item-holder">
+        <div class="mkdf-tours-destination-item-holder" data-bs-toggle="modal" data-bs-target="#modalGalt">
+          <div class="mkdf-tours-destination-item-image">
+            <img src="./imgs/El galt alazrq.jpeg" alt="El Galt Al Azraq" />
+          </div>
+          <div class="mkdf-tours-destination-item-content">
+            <div class="mkdf-tours-destination-item-content-table-cell">
+              <h4 class="mkdf-tours-destination-item-title">El Galt Al Azraq</h4>
+              <h5 class="mkdf-tours-destination-desc">Mountain Oasis</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ain Hodra -->
+      <div class="mkdf-tdm-item-holder">
+        <div class="mkdf-tours-destination-item-holder" data-bs-toggle="modal" data-bs-target="#modalHodra">
+          <div class="mkdf-tours-destination-item-image">
+            <img src="./imgs/ein-hodra.jpeg" alt="Ain Hodra" />
+          </div>
+          <div class="mkdf-tours-destination-item-content">
+            <div class="mkdf-tours-destination-item-content-table-cell">
+              <h4 class="mkdf-tours-destination-item-title">Ain Hodra</h4>
+              <h5 class="mkdf-tours-destination-desc">Desert Oasis</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wadi El-Kid -->
+      <div class="mkdf-tdm-item-holder">
+        <div class="mkdf-tours-destination-item-holder" data-bs-toggle="modal" data-bs-target="#modalKid">
+          <div class="mkdf-tours-destination-item-image">
+            <img src="./imgs/waDI-ELKID.jpeg" alt="Wadi El-Kid" />
+          </div>
+          <div class="mkdf-tours-destination-item-content">
+            <div class="mkdf-tours-destination-item-content-table-cell">
+              <h4 class="mkdf-tours-destination-item-title">Wadi El-Kid</h4>
+              <h5 class="mkdf-tours-destination-desc">Red Beauty Valley</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- Bootstrap Modals -->
+
+<!-- Modal: Kharzet El-Shaq -->
+<!-- Modal: Kharzet El-Shaq -->
+<div class="modal fade" id="modalKharzet" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-4">
+      <h4 class="mb-3">Kharzet El-Shaq — A Hidden Gem in the Heart of Shaq Tiniya Valley</h4>
+      <p>
+        Kharzet El-Shaq lies at the upper reaches of Shaq Tiniya Valley. It is a natural rock-carved water pool, crowned by a small seasonal waterfall formed by rainfall — one that often flows throughout the year. The surrounding landscape is a dramatic mix of stone formations and serene wilderness.
+      </p>
+      <p>
+        The area around the pool is rich with ancient mountain gardens, built by the ancestors of the Jebeliya tribe, who cultivated the land around reliable water sources — a living testament to their deep connection with the land.
+      </p>
+      <p>
+        Geographically, the site is framed by two prominent mountains:
+      </p>
+      <ul>
+        <li><strong>To the north:</strong> Jabal Naagah (Mount Naagah)</li>
+        <li><strong>To the south:</strong> Jabal Abbas Pasha</li>
+      </ul>
+      <p>
+        This makes Kharzet El-Shaq a magical stop on hiking trails — perfect for resting, photography, and quiet contemplation.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: El Galt Al Azraq -->
+<div class="modal fade" id="modalGalt" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-4">
+      <h4 class="mb-3">El Galt Al Azraq — A High-Altitude Oasis in the Heart of the Mountains</h4>
+      <p>
+        El Galt Al Azraq is the largest permanent water pool in the highlands of Saint Catherine. It lies beneath Wadi Al-Tabaq, northeast of Jabal Bab El Dunya, and is considered one of the most important natural stops along hiking trails in the area.
+      </p>
+      <p>
+        The site offers a perfect rest point for hikers, where they can swim in its cool waters and relax under the shade of surrounding willow trees — all amidst a rare mountain setting that blends serenity, isolation, and raw natural beauty.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Ain Hodra -->
+<div class="modal fade" id="modalHodra" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-4">
+      <h4 class="mb-3">Ain Hodra — An Oasis in the Heart of the Sandy Mountains</h4>
+      <p>
+        The water flows from sandstone rocks, surrounded by palm trees and desert vegetation, forming a small oasis that pulses with life in the heart of the barren wilderness.
+      </p>
+      <p>
+        The place is known for its deep silence and simple beauty, where stillness meets the whispers of water in a truly serene atmosphere.
+      </p>
+      <p>
+        Ain Hodra also serves as a perfect starting point for exploring a number of unique natural canyons in the region, including:
+      </p>
+      <ul>
+        <li>Wadi El Roum</li>
+        <li>Wadi Gazalla</li>
+        <li>The White Canyon</li>
+        <li>The Closed Canyon</li>
+        <li>Canyon Salam</li>
+        <li>El Nawamis site</li>
+      </ul>
+      <p>
+        Each offers a fascinating geological experience and breathtaking landscapes for lovers of hiking, photography, and pristine nature exploration.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Wadi El-Kid -->
+<div class="modal fade" id="modalKid" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-4">
+      <h4 class="mb-3">Wadi El-Kid — The Red Beauty Passage in the Heart of Sinai</h4>
+      <p>
+        Wadi El-Kid is one of the most stunning valleys in South Sinai. It begins with a wide entrance and follows an easy, winding path with few obstacles, making it ideal for hiking and gentle exploration. As you move deeper into the valley heading north, the passage narrows and becomes rich with tributaries and ravines, forming a vibrant natural network.
+      </p>
+      <p>
+        The valley is surrounded by towering granite mountains in striking shades of deep red and earthy terracotta. These colors shift beautifully throughout the day, as sunlight and shadows dance across the rock faces.
+      </p>
+      <p>
+        At the heart of the valley lies a hidden palm oasis, nourished by a natural spring — considered one of the most beautiful water sources in Sinai — offering a serene resting point amid the desert silence.
+      </p>
+      <p>
+        At the upper end of the valley, to the northwest, lies the Red Valley, a narrow gorge between steep cliffs where rare desert plants grow — species found nowhere else in the region. This makes it a unique ecological gem and a must-visit destination for lovers of pristine nature.
+      </p>
+    </div>
+  </div>
+</div>
+
+    <a id="toufek-back-to-top" href="#" class="on">
+      <div class="toufek-btt-wrapper">
+        <div class="toufek-btt-text">
+          <span class="toufek-btt-top">GO</span>
+          <span class="toufek-btt-bottom"UP</span>
+        </div>
+      </div>
+      <span class="toufek-icon-stack">
+        <i class="fa fa-angle-up"></i>
+      </span>
+    </a>
+<!-- contact -->
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content p-3">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel">Send us a message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" id="name" class="form-control" required />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Your Message</label>
+            <textarea id="message" class="form-control" rows="4" required></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-success">Send via WhatsApp</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript for WhatsApp -->
+<script>
+  function sendToWhatsApp(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const message = document.getElementById('message').value.trim();
+   const phoneNumber = "201009141766";
+
+
+    const encodedMessage = encodeURIComponent(`Hello, my name is ${name}.\n${message}`);
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    window.open(whatsappUrl, "_blank");
+  }
+</script>
+
+   
 
     <footer class="bg-dark text-white text-center py-3">
       <p class="mb-0">© 2025 Sinaifootprint | Designed with ❤️</p>
@@ -1325,7 +1541,8 @@
     <script>
       AOS.init(); // Initialize AOS on page load
     </script>
-
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       // Shrink navbar on scroll
@@ -1416,6 +1633,40 @@
       cardsContainerId: "extraSaintCards",
     });
   });
+
+$(document).ready(function () {
+  $(".owl-carousel").owlCarousel({
+    items: 3,
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    smartSpeed: 700,
+    dots: true, // ✅ enable dots here
+    responsive: {
+      0: { items: 1 },
+      768: { items: 2 },
+      1024: { items: 3 },
+    },
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.getElementById("toufek-back-to-top");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 100) {
+      button.classList.add("show");
+    } else {
+      button.classList.remove("show");
+    }
+  });
+
+  button.addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
 </script>
 
   </body>
