@@ -1068,3 +1068,9 @@
 #toufek-back-to-top:hover .toufek-icon-stack {
   color: #fff;
 }
+
+footer a:hover {
+  text-decoration: underline;
+  color: #e5b123 !important; 
+}
+
