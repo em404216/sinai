@@ -16,6 +16,85 @@
       background: #fdfaf4;
       color: #2e2e2e;
     }
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background: rgba(19, 66, 116, 0.5); /* semi-transparent dark blue */
+  color: white;
+  z-index: 1000;
+  font-family: 'Cinzel', serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease;
+}
+
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.8rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #e5b123;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #134274;
+    position: absolute;
+    top: 60px;
+    right: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
+
+/* Push down the header content below navbar */
+header {
+  margin-top: 60px;
+}
 
     header {
       height: 80vh;
@@ -177,6 +256,17 @@
   </style>
 </head>
 <body>
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="brand" href="./index.html">Sinaifootprint</div>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="./monastic.html">Monastic Settlements in Sinai</a></li>
+      <li><a href="./history.html">The Bedouin Culture</a></li>
+      <li><a href="./trecks.html">About Trips</a></li>
+    </ul>
+  </div>
+</nav>
 
   <header>
     <h1>Sinai — A Journey Through Time</h1>
@@ -242,7 +332,31 @@
     </div>
 
   </div>
-
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content p-3">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel">Send us a message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" id="name" class="form-control" required />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Your Message</label>
+            <textarea id="message" class="form-control" rows="4" required></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-success">Send via WhatsApp</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
   <footer>
     <p>“Walk softly in Sinai… the ground beneath your feet is older than kings.”</p>
   </footer>
@@ -265,7 +379,39 @@
       observer.observe(container);
     });
   </script>
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
 
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+<script>
+  const navbar = document.querySelector('.navbar');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.style.background = 'rgba(19, 66, 116, 0.85)';
+    } else {
+      navbar.style.background = 'rgba(19, 66, 116, 0.5)';
+    }
+  });
+</script>
+<script>
+  function sendToWhatsApp(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const message = document.getElementById('message').value.trim();
+   const phoneNumber = "201009141766";
+
+
+    const encodedMessage = encodeURIComponent(`Hello, my name is ${name}.\n${message}`);
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    window.open(whatsappUrl, "_blank");
+  }
+</script>
 </body>
 </html>
 
