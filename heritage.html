@@ -96,16 +96,17 @@ header {
   margin-top: 60px;
 }
 
-    header {
-      height: 80vh;
-      background: url('./imgs/360_F_234151308_MrCpLBWLqd0BRcwL9cThJQlYvGtrkMDx.jpg') center center / cover no-repeat fixed;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-align: center;
-      padding: 0 1rem;
-    }
+   header {
+  background: url('./imgs/photo_2025-07-09_19-17-18.jpg') center center / cover no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 6rem 1rem; /* بدل height */
+  min-height: 60vh;    /* لتجنب التمدد المبالغ فيه */
+}
+
 
     header h1 {
       font-family: 'Cinzel', serif;
